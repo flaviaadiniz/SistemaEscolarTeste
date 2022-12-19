@@ -1,14 +1,15 @@
 public class Endereco {
 
     private String rua;
-    private String bairro;
     private int numero;
     private String complemento;
+    private String bairro;
+
     private String cep;
     private Estado estado;
     private String cidade;
 
-    private Endereco(String rua, String bairro, int numero, String complemento, String cep, Estado estado, String cidade) {
+    private Endereco(String rua, int numero, String complemento, String bairro, String cep, Estado estado, String cidade) {
         this.rua = rua;
         this.bairro = bairro;
         this.numero = numero;
@@ -66,7 +67,7 @@ public class Endereco {
         }
 
         public Endereco criarEndereco() {
-            return new Endereco(rua, bairro, numero, complemento, cep, estado, cidade);
+            return new Endereco(rua, numero, complemento, bairro, cep, estado, cidade);
         }
 
     }
@@ -131,14 +132,12 @@ public class Endereco {
 
     @Override
     public String toString() {
-        return "Endereco{" +
-                "rua='" + rua + '\'' +
-                ", bairro='" + bairro + '\'' +
-                ", numero=" + numero +
-                ", complemento='" + complemento + '\'' +
-                ", cep='" + cep + '\'' +
-                ", estado=" + estado +
-                ", cidade='" + cidade + '\'' +
-                '}';
+        return "Rua: " + rua +
+                " | Bairro: " + bairro +
+                " | Número: " + numero +
+                " | Complemento: " + complemento +
+                " | CEP: " + cep +
+                " | Estado: " + estado +
+                " | Cidade: " + cidade;
     }
 }

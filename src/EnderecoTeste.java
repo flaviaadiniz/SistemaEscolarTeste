@@ -12,8 +12,38 @@ public class EnderecoTeste {
                 .estado(Estado.RS)
                 .criarEndereco();
 
-        System.out.println(endereco1);
+
+        Professor professor1 = new Professor.Builder<>()
+                .nome("Flávia Amaral Diniz")
+                .idade(38)
+                .rg("1112223344")
+                .endereco(endereco1)
+                .email("flaviaadiniz@gmail.com")
+                .materia(Materia.INGLES)
+                .build();
+
+        System.out.println(professor1);
+
+
+        Aluno aluno1 = new Aluno.Builder<>()
+                .nome("Sofia Argimon")
+                .idade(13)
+                .rg("2223334455")
+                .endereco(new Endereco.EnderecoBuilder().criarEndereco())
+                .classe(Classe.A3)
+                .build();
+
+        System.out.println(aluno1);
+
+
+        Visitante visitante1 = new Visitante.Builder<>()
+                .nome("Maria da Silva")
+                .idade(50)
+                .rg("4445556677")
+                .endereco(new Endereco.EnderecoBuilder().criarEndereco())
+                .build();
+
+        System.out.println(visitante1);
 
     }
-
 }
