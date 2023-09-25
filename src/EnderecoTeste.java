@@ -10,7 +10,7 @@ public class EnderecoTeste {
                 .bairro("Partenon")
                 .cidade("Porto Alegre")
                 .estado(Estado.RS)
-                .criarEndereco();
+                .build();
 
 
         Professor professor1 = new Professor.Builder<>()
@@ -29,7 +29,7 @@ public class EnderecoTeste {
                 .nome("Sofia Argimon")
                 .idade(13)
                 .rg("2223334455")
-                .endereco(new Endereco.EnderecoBuilder().criarEndereco())
+                .endereco(new Endereco.EnderecoBuilder().build())
                 .classe(Classe.A3)
                 .build();
 
@@ -40,7 +40,7 @@ public class EnderecoTeste {
                 .nome("Maria da Silva")
                 .idade(50)
                 .rg("4445556677")
-                .endereco(new Endereco.EnderecoBuilder().criarEndereco())
+                .endereco(new Endereco.EnderecoBuilder().build())
                 .build();
 
         System.out.println(visitante1);

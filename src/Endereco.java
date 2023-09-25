@@ -4,7 +4,6 @@ public class Endereco {
     private int numero;
     private String complemento;
     private String bairro;
-
     private String cep;
     private Estado estado;
     private String cidade;
@@ -66,7 +65,7 @@ public class Endereco {
             return this;
         }
 
-        public Endereco criarEndereco() {
+        public Endereco build() {
             return new Endereco(rua, numero, complemento, bairro, cep, estado, cidade);
         }
 
